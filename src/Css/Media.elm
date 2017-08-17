@@ -351,28 +351,6 @@ only =
     PrependMediaModifier (MediaModifier "only")
 
 
-{-| Media modifier to negate a query
-
-    media [ not, screen, color ] [ body [ Css.color (hex "000000") ] ]
-
--}
-not : MediaQueryComponent
-not =
-    PrependMediaModifier (MediaModifier "not")
-
-
-{-| Combine media queries, where matching either query should apply the following CSS properties.
-
-    media [ screen, or, print ] [ ... ]
-
-The rule above will apply to either screens or printers.
-
--}
-or : MediaQueryComponent
-or =
-    AppendOrSeparator MediaOrSeparator
-
-
 
 {--Media Types --}
 
